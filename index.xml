@@ -13,7 +13,37 @@
       <pubDate>Thu, 14 Jul 2022 18:09:36 +0800</pubDate>
       
       <guid>https://nanyaniya.github.io/post/passage0/</guid>
-      <description>1.usage of typora ctrl 1~6 :1至六级标题（also ctrl+/-）</description>
+      <description>Welcome here！
+本文用了git和hugo两个工具来搭建GitHub博客，不需要用到额外的域名（custom domain），简洁易上手！
+===============【start here】==================
+1.准备git和hugo工具 hugo 下载地址：gohugo.io
+git 官网下载即可
+2.安装git 3.安装hugo 3.1）创建hugo文件夹
+3.2）在上一步的hugo下创建bin和sites文件夹
+3.3）hugo的zip解压到bin
+4.配置path环境变量 windows搜索envi，然后按照下图配置：
+选择新建，输入hugo地址：
+点击确定
+5.hugo建立站点 5.0 ）检验hugo环境配置是否生效
+win+R，打开cmd，输入：
+hugo version ![image-20220714220033195](C:\Users\Yan xinr\AppData\Roaming\Typora\typora-user-images\image-20220714220033195.png)
+出现如下版本号表示成功！
+5.1）创建新site
+还是在命令行下：（先进入C/D/F等盘）
+cd hugo/sites hugo new site myblog #创建名为myblog的新站点 可以看见：
+6.创建一篇文章 6.0）一定要先进入在第五步创立的站点文件中（我的是myblog）操作如下：
+命令行输入：cd myblog
+6.1）站点文件中创建文章
+cmd输入：
+hugo new post\passage0.md #创建名为passage0的文章 可以看见:
+![image-20220714220843737](C:\Users\Yan xinr\AppData\Roaming\Typora\typora-user-images\image-20220714220843737.png)
+文章点开如下：【我用的是typora编辑器】
+![image-20220714221039992](C:\Users\Yan xinr\AppData\Roaming\Typora\typora-user-images\image-20220714221039992.png)
+7.hugo 下载theme 进入hugo官网，选择最上面一行的theme栏，选择一款你喜欢的主题
+​	如：m10c【地址如下https://themes.gohugo.io/themes/hugo-theme-m10c/】
+进入之后往下翻，installation下说了如何安装,如图
+![image-20220714221528782](C:\Users\Yan xinr\AppData\Roaming\Typora\typora-user-images\image-20220714221528782.png)
+所以，我们只需要在cmd里输入如下代码：【代码格式为： git clone [url addr] [存放目录] 】</description>
     </item>
     
   </channel>
