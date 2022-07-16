@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Passage1|totorial2|图像处理基础 // My New Hugo Site</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://nanyaniya.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Passage1|totorial2|图像处理基础"/>
+<meta name="twitter:description" content="image processing basics tools or libs:
+​	openCV	：OpenCV： OpenCV-Python Tutorials
+​	Numpy:	https://docs.opencv.org/4.5.2/d6/d00/tutorial_py_root.html
+​	pillow:	https://docs.scipy.org/doc/scipy/reference/
+​	spicy:	https://numpy.org/doc/1.21
+​	matplotlib:	https://matplotlib.org/stable/contents.html
+Q1:	convolution #import numpy as np #==========一维卷积================= # A=np.array([2,-1]) # B=np.array([-1,2,1]) #可以将列表转化为数组，也可以不转 A=[2,1,1,-1] B=[1,0,0.25] #scipy.signal.convolve（in1， in2， mode=&#39;full&#39;， method=&#39;auto&#39;) C=signal.convolve(A,B, mode=&#39;full&#39;,method=&#39;auto&#39;) print(C) #==========二维卷积================= A1=[[1,3,2,-1],[2,0,3,4],[-1,2,4,1],[5,-2,0,1]] B1=[[0,1],[2,-1]] # C1=signal.convolve(A1,B1, mode=&#39;full&#39;,method=&#39;auto&#39;) C1=signal.convolve(A1,B1) print(C1) Q2&amp;Q4:image reading&amp;writing ；color space convertion|openCV color space ​	opencv 中顺序是BGR
+​	HSV 表达彩色图像的方式由三个部分组成：
+Hue（色调、色相） Saturation（饱和度、色彩纯净度） Value（明度） histogram some terminologies related with histograms:"/>
+
+    <meta property="og:title" content="Passage1|totorial2|图像处理基础" />
+<meta property="og:description" content="image processing basics tools or libs:
+​	openCV	：OpenCV： OpenCV-Python Tutorials
+​	Numpy:	https://docs.opencv.org/4.5.2/d6/d00/tutorial_py_root.html
+​	pillow:	https://docs.scipy.org/doc/scipy/reference/
+​	spicy:	https://numpy.org/doc/1.21
+​	matplotlib:	https://matplotlib.org/stable/contents.html
+Q1:	convolution #import numpy as np #==========一维卷积================= # A=np.array([2,-1]) # B=np.array([-1,2,1]) #可以将列表转化为数组，也可以不转 A=[2,1,1,-1] B=[1,0,0.25] #scipy.signal.convolve（in1， in2， mode=&#39;full&#39;， method=&#39;auto&#39;) C=signal.convolve(A,B, mode=&#39;full&#39;,method=&#39;auto&#39;) print(C) #==========二维卷积================= A1=[[1,3,2,-1],[2,0,3,4],[-1,2,4,1],[5,-2,0,1]] B1=[[0,1],[2,-1]] # C1=signal.convolve(A1,B1, mode=&#39;full&#39;,method=&#39;auto&#39;) C1=signal.convolve(A1,B1) print(C1) Q2&amp;Q4:image reading&amp;writing ；color space convertion|openCV color space ​	opencv 中顺序是BGR
+​	HSV 表达彩色图像的方式由三个部分组成：
+Hue（色调、色相） Saturation（饱和度、色彩纯净度） Value（明度） histogram some terminologies related with histograms:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nanyaniya.github.io/post/passage1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-07-15T18:46:49+08:00" />
+<meta property="article:modified_time" content="2022-07-15T18:46:49+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://nanyaniya.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Passage1|totorial2|图像处理基础</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 15, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="image-processing-basics">image processing basics</h2>
+<p>tools or libs:</p>
+<p>​	openCV	：<a href="https://docs.opencv.org/4.5.2/d6/d00/tutorial_py_root.html">OpenCV： OpenCV-Python Tutorials</a></p>
+<p>​	Numpy:	https://docs.opencv.org/4.5.2/d6/d00/tutorial_py_root.html</p>
+<p>​	pillow:		https://docs.scipy.org/doc/scipy/reference/</p>
+<p>​	spicy:	https://numpy.org/doc/1.21</p>
+<p>​	matplotlib:	https://matplotlib.org/stable/contents.html</p>
+<h3 id="q1convolution">Q1:	convolution</h3>
+<p><img src="../../../../../image.source/QQ%E6%88%AA%E5%9B%BE20220715192656.png" alt="QQ截图20220715192656"></p>
+<pre tabindex="0"><code>#import numpy as np
+#==========一维卷积=================
+# A=np.array([2,-1])
+# B=np.array([-1,2,1])
+#可以将列表转化为数组，也可以不转
+A=[2,1,1,-1]
+B=[1,0,0.25]
+#scipy.signal.convolve（in1， in2， mode=&#39;full&#39;， method=&#39;auto&#39;)
+C=signal.convolve(A,B, mode=&#39;full&#39;,method=&#39;auto&#39;)
+print(C)
+#==========二维卷积=================
+A1=[[1,3,2,-1],[2,0,3,4],[-1,2,4,1],[5,-2,0,1]]
+B1=[[0,1],[2,-1]]
+# C1=signal.convolve(A1,B1, mode=&#39;full&#39;,method=&#39;auto&#39;)
+C1=signal.convolve(A1,B1)
+print(C1)
+</code></pre><h3 id="q2q4image-readingwriting-color-space-convertionopencv">Q2&amp;Q4:image reading&amp;writing ；color space convertion|openCV</h3>
+<h4 id="color-space">color space</h4>
+<p>​	opencv 中顺序是BGR</p>
+<p>​	HSV 表达彩色图像的方式由三个部分组成：</p>
+<ul>
+<li>Hue（色调、色相）</li>
+<li>Saturation（饱和度、色彩纯净度）</li>
+<li>Value（明度）</li>
+</ul>
+<!-- raw HTML omitted -->
+<h4 id="histogram">histogram</h4>
+<p>some terminologies related with histograms:</p>
+<p>​		<strong>BINS</strong> :sub-part ,represented by the term <strong>histSize</strong> in OpenCV docs.</p>
+<p>​		<strong>DIMS</strong> :数据维度（参数的个数）</p>
+<p>​		<strong>RANGE</strong> : range of intensity values，Normally,[0,256]</p>
+<h5 id="find-histogram">Find Histogram</h5>
+<p>in openCV:</p>
+<pre tabindex="0"><code>img = cv.imread(&#39;home.jpg&#39;,0)
+hist = cv.calcHist([img],[0],None,[256],[0,256])
+</code></pre><p>hist=cv.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]])</p>
+<p>hist is a 256x1 array, each value corresponds to number of pixels in that image with its corresponding pixel value.</p>
+<p>while in numpy:</p>
+<pre tabindex="0"><code>hist,bins = np.histogram(img.ravel(),256,[0,256])
+</code></pre><h5 id="plotting-histograms">Plotting Histograms</h5>
+<p>matplotlib:</p>
+<pre tabindex="0"><code>import numpy as np
+import cv2 as cv
+from matplotlib import pyplot as plt
+img = cv.imread(&#39;home.jpg&#39;,0)
+plt.hist(img.ravel(),256,[0,256]); plt.show()
+</code></pre><p>​		or (for rgb)</p>
+<pre tabindex="0"><code>import numpy as np
+import cv2 as cv
+from matplotlib import pyplot as plt
+img = cv.imread(&#39;home.jpg&#39;)
+color = (&#39;b&#39;,&#39;g&#39;,&#39;r&#39;)
+for i,col in enumerate(color):
+    histr = cv.calcHist([img],[i],None,[256],[0,256])
+    plt.plot(histr,color = col)
+    plt.xlim([0,256])
+plt.show()
+</code></pre><p>enumerate（）函数表示将列表、字符串等可遍历的数据对象组成一个索引序列(index,value)</p>
+<p>opencv:</p>
+<pre tabindex="0"><code>img = cv.imread(&#39;home.jpg&#39;,0)
+# create a mask
+mask = np.zeros(img.shape[:2], np.uint8)
+mask[100:300, 100:400] = 255
+masked_img = cv.bitwise_and(img,img,mask = mask)
+# Calculate histogram with mask and without mask
+# Check third argument for mask
+hist_full = cv.calcHist([img],[0],None,[256],[0,256])
+hist_mask = cv.calcHist([img],[0],mask,[256],[0,256])
+plt.subplot(221), plt.imshow(img, &#39;gray&#39;)
+plt.subplot(222), plt.imshow(mask,&#39;gray&#39;)
+plt.subplot(223), plt.imshow(masked_img, &#39;gray&#39;)
+plt.subplot(224), plt.plot(hist_full), plt.plot(hist_mask)
+plt.xlim([0,256])
+plt.show()
+</code></pre><p>histogram equalization</p>
+<pre tabindex="0"><code>
+import cv2 as cv
+import sys
+#opencv
+#====Q2====
+#img = cv.imread(r&#34;C:\Users\Yan xinr\Desktop\lena.png&#34;)
+img = cv.imread(&#39;C:/Users/Yan xinr/Desktop/t2/q2/lena.png&#39;)
+if img is None:
+    sys.exit(&#34;Could not read the image.&#34;)
+cv.imshow(&#34;Display window&#34;, img)
+k = cv.waitKey(0)
+if k == ord(&#34;k&#34;):
+    cv.imwrite(&#39;G:/nus_hw/t2/q2/lena_reversed.png&#39;, img)
+    print(&#34;done&#34;)
+    
+#======Q4===
+img_bee = cv.imread(r&#34;C:\Users\Yan xinr\Desktop\bee.png&#34;)
+cv.imshow(&#34;Display window:origin&#34;, img_bee)
+#cv.imshow(	winname, mat)
+k = cv.waitKey(0)
+if k == ord(&#34;k&#34;):
+    cv.destroyAllWindows()
+
+#BGR\Gray,BGR\HSV
+# 将 BGR 转换为 HSV
+bee_hsv= cv.cvtColor(img_bee,cv.COLOR_BGR2HSV)
+cv.imshow(&#34;Display window:hsv&#34;, bee_hsv)
+#cv.imshow(	winname, mat)
+k = cv.waitKey(0)
+if k == ord(&#34;k&#34;):
+    cv.destroyAllWindows()
+#import numpy as np
+#关于分离图像通道函数
+# image=cv2.imread(&#34;/home/zje/Pictures/lena.jpeg&#34;);#读取要处理的图片
+# B,G,R = cv2.split(image);                       #分离出图片的B，R，G颜色通道
+# zeros = np.zeros(image.shape[:2],dtype=&#34;uint8&#34;);#创建与image相同大小的零矩阵
+# cv2.imshow(&#34;BLUE&#34;,cv2.merge([B,zeros,zeros]));#显示 （B，0，0）图像
+# cv2.imshow(&#34;GREEN&#34;,cv2.merge([zeros,G,zeros]));#显示（0，G，0）图像
+# cv2.imshow(&#34;RED&#34;,cv2.merge([zeros,zeros,R]));#显示（0，0，R）图像
+# cv2.waitKey(0);
+H,S,V=cv.split(bee_hsv)
+equ_V = cv.equalizeHist(V)
+equ_bee= cv.merge([H,S,equ_V])
+bee_rgb= cv.cvtColor(img_bee,cv.COLOR_HSV2RGB)
+cv.imshow(&#34;Display window:H&#34;, H)
+cv.imshow(&#34;Display window:S&#34;, S)
+cv.imshow(&#34;Display window:V&#34;, V)
+cv.imshow(&#34;Display window:euq&#34;, equ_V)
+cv.imshow(&#34;Display window:equ_bee&#34;, equ_bee)
+cv.imshow(&#34;Display window:bee_rgb&#34;, bee_rgb)
+cv.waitKey(0)
+cv.destroyAllWindows()
+cv.imwrite(&#39;G:/nus_hw/t2/q2/bee_reversed.png&#39;, bee_rgb)
+print(&#34;done&#34;)
+</code></pre><h3 id="q3pillow">Q3|pillow</h3>
+<h6 id="open-rotate-and-display-an-image">Open, rotate, and display an image</h6>
+<pre tabindex="0"><code>from PIL import Image
+with Image.open(&#34;hopper.jpg&#34;) as im:
+    im.rotate(45).show()
+</code></pre><h6 id="create-thumbnails略缩图">Create thumbnails(略缩图)</h6>
+<pre tabindex="0"><code>from PIL import Image
+import glob, os
+
+size = 128, 128
+
+for infile in glob.glob(&#34;*.jpg&#34;):
+    file, ext = os.path.splitext(infile)
+    with Image.open(infile) as im:
+        im.thumbnail(size)
+        im.save(file + &#34;.thumbnail&#34;, &#34;JPEG&#34;)
+</code></pre><h6 id="functions">Functions</h6>
+<pre tabindex="0"><code>PIL.Image.open(fp, mode=&#39;r&#39;, formats=None)
+</code></pre><p>fp&ndash;文件路径，mode&ndash;读写方式（这里为r），format&ndash;格式：传递 None 以尝试所有支持的格式。</p>
+<h6 id="image-processing">Image processing</h6>
+<pre tabindex="0"><code>PIL.Image.alpha_composite(im1, im2)
+</code></pre><p>Alpha composite im2 over im1.</p>
+<p><strong>im1</strong> – The first image. Must have mode RGBA.</p>
+<p><strong>im2</strong> – The second image. Must have mode RGBA, and the same size as the first image.</p>
+<p>RETURNS:	An <a href="https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image"><code>Image</code></a> object.</p>
+<pre tabindex="0"><code>PIL.Image.blend(im1, im2, alpha)
+</code></pre><p>Creates a new image by interpolating between two input images, using a constant alpha:</p>
+<pre tabindex="0"><code>out = image1 * (1.0 - alpha) + image2 * alpha
+</code></pre><p><strong>im1</strong> – The first image.</p>
+<p><strong>im2</strong> – The second image. Must have the same mode and size as the first image.</p>
+<p><strong>alpha</strong> – The interpolation alpha factor. If alpha is 0.0, a copy of the first image is returned. If alpha is 1.0, a copy of the second image is returned. There are no restrictions on the alpha value. If necessary, the result is clipped to fit into the allowed output range.</p>
+<p>RETURNS:</p>
+<p>An <a href="https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image"><code>Image</code></a> object.</p>
+<p>明天再写，g</p>
+<pre tabindex="0"><code>#=====================Q3====================
+from PIL import Image,ImageFilter
+
+# with Image.open(&#39;C:/Users/Yan xinr/Desktop/t2/q2/lena.png&#39;) as im:
+#     im.rotate(45).show()
+    
+im = Image.open(&#39;C:/Users/Yan xinr/Desktop/t2/q2/lena.png&#39;)
+box=(100,100,400,400)
+im_crop = im.crop(box)
+im_hist0=im.histogram()
+im_hist=im_crop.histogram()
+im.show()
+im_crop.show()
+im_crop.rotate(-90).show()
+plt.subplot(121),plt.plot(im_hist0)
+plt.subplot(122),plt.plot(im_hist)
+im_max=im.filter(ImageFilter.MaxFilter(size=3))
+im_max.show()
+im.filter(ImageFilter.MinFilter(size=3)).show()
+im.filter(ImageFilter.MedianFilter(size=3)).show()
+
+im.filter(ImageFilter.GaussianBlur(radius=1)).show()
+</code></pre>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

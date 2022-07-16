@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Passage0|Build a blog based on Hugo&amp;Github // My New Hugo Site</title>
+    <title>Passage0|创建博客|Build a blog based on Hugo&amp;Github // My New Hugo Site</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.101.0" />
@@ -12,7 +12,7 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Passage0|Build a blog based on Hugo&amp;Github"/>
+<meta name="twitter:title" content="Passage0|创建博客|Build a blog based on Hugo&amp;Github"/>
 <meta name="twitter:description" content="Welcome here！
 本文用了git和hugo两个工具来搭建GitHub博客，不需要用到额外的域名（custom domain），简洁易上手！
 ===============【start here】==================
@@ -45,7 +45,7 @@ hugo new post\passage0.md #创建名为passage0的文章 可以看见:
 ![image-20220714221528782](C:\Users\Yan xinr\AppData\Roaming\Typora\typora-user-images\image-20220714221528782.png)
 所以，我们只需要在cmd里输入如下代码：【代码格式为： git clone [url addr] [存放目录] 】"/>
 
-    <meta property="og:title" content="Passage0|Build a blog based on Hugo&amp;Github" />
+    <meta property="og:title" content="Passage0|创建博客|Build a blog based on Hugo&amp;Github" />
 <meta property="og:description" content="Welcome here！
 本文用了git和hugo两个工具来搭建GitHub博客，不需要用到额外的域名（custom domain），简洁易上手！
 ===============【start here】==================
@@ -95,7 +95,7 @@ hugo new post\passage0.md #创建名为passage0的文章 可以看见:
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Passage0|Build a blog based on Hugo&amp;Github</h1>
+      <h1 class ="post-title">Passage0|创建博客|Build a blog based on Hugo&amp;Github</h1>
       <div class="post-meta">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
@@ -168,9 +168,10 @@ hugo new site myblog #创建名为myblog的新站点
 <p>所以，我们只需要在cmd里输入如下代码：【代码格式为： git clone [url addr] [存放目录] 】</p>
 <pre tabindex="0"><code>git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
 </code></pre><h4 id="8主题的渲染">8.主题的渲染</h4>
-<pre tabindex="0"><code>D:\hugo\sites\tryblog&gt;hugo server -t m10c --buildDrafts    #m10c是主题的名字，就是之前在hugo下载的，你下的是啥这里就替换成啥
+<p>D:\hugo\sites\tryblog目录下：</p>
+<p>​	cmd输入：</p>
+<pre tabindex="0"><code>hugo server -t m10c --buildDrafts    #m10c是主题的名字，就是之前在hugo下载的，你下的是啥这里就替换成啥
 </code></pre><p>可在浏览器查看渲染效果：localhost：1313</p>
-<p>(again）</p>
 <h4 id="9创建github账号创建repo仓库">9.创建github账号，创建repo仓库</h4>
 <p>![image-20220714222235834](C:\Users\Yan xinr\AppData\Roaming\Typora\typora-user-images\image-20220714222235834.png)</p>
 <!-- raw HTML omitted -->
@@ -181,7 +182,7 @@ hugo new site myblog #创建名为myblog的新站点
 <p>例如：</p>
 <pre tabindex="0"><code>hugo --theme=m10c --baseUrl=&#34;https://nanyaniya.github.io&#34; --buildDrafts
 </code></pre><h4 id="11创建git文件夹">11.创建.git文件夹</h4>
-<p>先在命令行输入：cd public，进入public文件夹下</p>
+<p>先在命令行输入：cd public，<strong>进入public文件夹下</strong></p>
 <p>然后有两种方式：</p>
 <p>way1:public 目录下鼠标右键，点击git gui here</p>
 <p>【如果git gui/bash here的图标不对，烦请移步其他的贴子】</p>
@@ -206,6 +207,7 @@ hugo new site myblog #创建名为myblog的新站点
 <pre tabindex="0"><code>git push -u origin master
 </code></pre><h4 id="16访问你的界面">16.访问你的界面</h4>
 <p>浏览器输入：【repo名称】.github.io		如，我的为：nanyaniya.github.io</p>
+<p><img src="images/image-20220714231216215.png" alt="image-20220714231216215"></p>
 <p>可以访问说明创建成功啦！</p>
 <p>这一步困扰了我好久，我自己不成功的几个原因是这样：</p>
 <p>1.界面显示：404 ，There isn&rsquo;t a GitHub Pages site here.</p>
@@ -214,10 +216,9 @@ hugo new site myblog #创建名为myblog的新站点
 <p>2.界面只显示文本，不显示主题</p>
 <p>​		原因：github进入repo 如下界面，我自己的main分支是一个readme文件，本地上传的在master分支里，而此处source则来源于main,所以报错了</p>
 <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <p>​		改正：在这里改成master，再次访问即可![image-20220714224858391](C:\Users\Yan xinr\AppData\Roaming\Typora\typora-user-images\image-20220714224858391.png)</p>
 <p>======================END==================</p>
-<p>这是本小白第一次搭建博客，是根据b站视频【只要10分钟！极速教会免费搭建线上博客-哔哩哔哩】 <a href="https://b23.tv/QGIZzq7">https://b23.tv/QGIZzq7</a> 一步一步来的，up讲的非常好，但是我还是遇到了一些问题，所以就想花点时间记录一下这些曲折的过程，希望能帮到更多像我一样的小白！特此感谢up🐖！！！</p>
+<p>这是本小白第一次搭建博客，是根据b站视频【只要10分钟！极速教会免费搭建线上博客-哔哩哔哩】 <a href="https://b23.tv/QGIZzq7">https://b23.tv/QGIZzq7</a> 一步一步来的，up讲的非常好，但是我还是遇到了一些问题，所以就想花点时间记录一下这些曲折的过程，希望能帮到更多像我一样的小白！特此感谢up🐖！！！d:</p>
 
     </div>
     <div class="post-footer">

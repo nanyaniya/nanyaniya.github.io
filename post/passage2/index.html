@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Passage2|数字图像识别|Digit Recognition // My New Hugo Site</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://nanyaniya.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Passage2|数字图像识别|Digit Recognition"/>
+<meta name="twitter:description" content="!!!!!ppt的内容还没加上来
+will use:	MNIST dataset:	http://yann.lecun.com/exdb/mnist/
+​	sklearn :	https://scikit-learn.org/stable/
+​	k-Nearest Neighbours classifiers:	https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+​	RandomForest classifiers:	https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+​	Naïve Bayes classifiers:	https://scikit-learn.org/stable/modules/naive_bayes.html
+MNIST The MNIST database (Modified National Institute of Standards and Technology database) is a large database of handwritten digits that is commonly used for training various image processing systems.
+获取数据集：sklearn.datasets.fetch_openml
+sklearn.datasets.fetch_openml(name: Optional[str] = None, *, version: Union[str, int] = &#39;active&#39;, data_id: Optional[int] = None, data_home: Optional[str] = None, target_column: Optional[Union[str, List]] = &#39;default-target&#39;, cache: bool = True, return_X_y: bool = False, as_frame: Union[str, bool] = &#39;auto&#39;, n_retries: int = 3, delay: float = 1."/>
+
+    <meta property="og:title" content="Passage2|数字图像识别|Digit Recognition" />
+<meta property="og:description" content="!!!!!ppt的内容还没加上来
+will use:	MNIST dataset:	http://yann.lecun.com/exdb/mnist/
+​	sklearn :	https://scikit-learn.org/stable/
+​	k-Nearest Neighbours classifiers:	https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+​	RandomForest classifiers:	https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+​	Naïve Bayes classifiers:	https://scikit-learn.org/stable/modules/naive_bayes.html
+MNIST The MNIST database (Modified National Institute of Standards and Technology database) is a large database of handwritten digits that is commonly used for training various image processing systems.
+获取数据集：sklearn.datasets.fetch_openml
+sklearn.datasets.fetch_openml(name: Optional[str] = None, *, version: Union[str, int] = &#39;active&#39;, data_id: Optional[int] = None, data_home: Optional[str] = None, target_column: Optional[Union[str, List]] = &#39;default-target&#39;, cache: bool = True, return_X_y: bool = False, as_frame: Union[str, bool] = &#39;auto&#39;, n_retries: int = 3, delay: float = 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nanyaniya.github.io/post/passage2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-07-16T11:22:43+08:00" />
+<meta property="article:modified_time" content="2022-07-16T11:22:43+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://nanyaniya.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Passage2|数字图像识别|Digit Recognition</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 16, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>!!!!!ppt的内容还没加上来</p>
+<p>will use:	MNIST dataset:	http://yann.lecun.com/exdb/mnist/</p>
+<p>​					sklearn :	https://scikit-learn.org/stable/</p>
+<p>​					k-Nearest Neighbours classifiers:	https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html</p>
+<p>​			 	  RandomForest classifiers:	https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html</p>
+<p>​			 	 Naïve Bayes classifiers:	https://scikit-learn.org/stable/modules/naive_bayes.html</p>
+<h2 id="mnist">MNIST</h2>
+<p>The MNIST database (Modified National Institute of Standards and Technology database) is a large  database of handwritten digits that is commonly used for training various image processing systems.</p>
+<p>获取数据集：sklearn.datasets.fetch_openml</p>
+<pre tabindex="0"><code>sklearn.datasets.fetch_openml(name: Optional[str] = None, *, version: Union[str, int] = &#39;active&#39;, data_id: Optional[int] = None, data_home: Optional[str] = None, target_column: Optional[Union[str, List]] = &#39;default-target&#39;, cache: bool = True, return_X_y: bool = False, as_frame: Union[str, bool] = &#39;auto&#39;, n_retries: int = 3, delay: float = 1.0)
+
+from sklearn.datasets import fetch_openml
+mice = fetch_openml(name=&#39;miceprotein&#39;, version=4)
+</code></pre><h2 id="sklearn">Sklearn</h2>
+<h2 id="classifiers">Classifiers</h2>
+<h4 id="k-nearest-neighbours-classifiers">k-Nearest Neighbours classifiers</h4>
+<h4 id="randomforest-classifiers">RandomForest classifiers</h4>
+<h4 id="naïve-bayes-classifiers">Naïve Bayes classifiers</h4>
+<h2 id="questions">Questions</h2>
+<h4 id="q1">q1</h4>
+<h4 id="q2">q2</h4>
+<h4 id="q3">q3</h4>
+<h4 id="q4">q4</h4>
+<h2 id="python-basic-operations">Python basic operations</h2>
+<h6 id="查看变量类型">查看变量类型</h6>
+<pre tabindex="0"><code>type(variable)
+</code></pre><p>class &rsquo;numpy.ndarray&rsquo;:	ndarray全称The N-dimensional array，是Numpy中的数据结构，是一个多维数组，存储着相同类型和大小的元素的多维数组。数组的维度和每个数组中的元素是由shape来决定的。数组中的元素类型是由dtype决定的。</p>
+<h6 id="寻找数组中的唯一元素find-the-unique-elements-of-an-array">寻找数组中的唯一元素Find the unique elements of an array.</h6>
+<pre tabindex="0"><code>numpy.unique(ar, return_index=False, return_inverse=False, return_counts=False, axis=None)
+</code></pre><p>[numpy.unique — NumPy v1.21 Manual](<a href="https://numpy.org/doc/1.21/reference/generated/numpy.unique.html?highlight=np">https://numpy.org/doc/1.21/reference/generated/numpy.unique.html?highlight=np</a> unique)</p>
+<p><strong>Parameters</strong></p>
+<p><em>return_inverse</em>*:	bool, optional</p>
+<p>​			If True, also return the indices of the unique array (for the specified axis, if provided) that can be used to reconstruct <em>ar</em>.</p>
+<p><strong>Returns</strong></p>
+<ul>
+<li>
+<p><strong>unique</strong>:	ndarray;	The sorted unique values.</p>
+</li>
+<li>
+<p><strong>unique_indices</strong>:   ndarray, optional</p>
+<p>The indices of the first occurrences of the unique values in the original array. Only provided if <em>return_index</em> is True.</p>
+</li>
+<li>
+<p><strong>unique_inverse</strong>:  ndarray, optional</p>
+<p>The indices to reconstruct the original array from the unique array. Only provided if <em>return_inverse</em> is True.</p>
+</li>
+</ul>
+<h6 id="npwhere">np.where()</h6>
+<p>usage1:	np.where(condition, x, y)</p>
+<p>usage2:	np.where(condition)</p>
+<p>输出满足条件 (即非0) 元素的坐标 (等价于numpy.nonzero)。这里的坐标以tuple的形式给出，通常原数组有多少维，输出的tuple中就包含几个数组，分别对应符合条件元素的各维坐标。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; a = np.arange(27).reshape(3,3,3)
+&gt;&gt;&gt; a
+array([[[ 0, 1, 2],
+    [ 3, 4, 5],
+    [ 6, 7, 8]],
+ 
+    [[ 9, 10, 11],
+    [12, 13, 14],
+    [15, 16, 17]],
+ 
+    [[18, 19, 20],
+    [21, 22, 23],
+    [24, 25, 26]]])
+ 
+&gt;&gt;&gt; np.where(a &gt; 5)
+#(竖着看三个返回数组为坐标)
+(array([0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]),
+ array([2, 2, 2, 0, 0, 0, 1, 1, 1, 2, 2, 2, 0, 0, 0, 1, 1, 1, 2, 2, 2]),
+ array([0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]))
+# 符合条件的元素为
+  [ 6, 7, 8]],
+ 
+   [[ 9, 10, 11],
+    [12, 13, 14],
+    [15, 16, 17]],
+ 
+   [[18, 19, 20],
+    [21, 22, 23],
+    [24, 25, 26]]]
+</code></pre><h6 id="matplotlibpyplotimshow">matplotlib.pyplot.<strong>imshow</strong></h6>
+<p>matplotlib.pyplot.<strong>imshow</strong>（<em>X</em>， <em>cmap=None</em>， <em>norm=None</em>， *<strong>， <em>aspect=None</em>， <em>interpolation=无</em>，<em>alpha=无</em>，<em>vmin=无</em>，<em>vmax=无</em>，<em>原点=无</em>，<em>范围=无</em>，<em>interpolation_stage=无</em>，<em>filternorm=True</em>，<em>filterrad=4.0</em>，<em>resample=None</em>，<em>url=无</em>，<em>数据=无</em>，<em><strong>kwargs</strong></em>)</strong></p>
+<p>后面再写~</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
